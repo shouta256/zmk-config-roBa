@@ -92,6 +92,17 @@
             #sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
         };
+
+        // 親指キー用の英数／かな切り替えタップダンス。
+        ek: eisu_kana {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Eisu / Kana";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
+
+            // ダブルタップをゆっくりめでも認識する。
+            tapping-term-ms = <250>;
+        };
     };
 
     keymap {
@@ -101,9 +112,9 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
+&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(N5))                     &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &ek                            &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &mo 6
             >;
 
             // 左エンコーダは細かいホイール量でスクロール。
@@ -114,7 +125,7 @@
         FUNCTION {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                       &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
+&trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans      &kp F13  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
 &trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans  &trans  &trans  &trans  &kp F11
 &trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                          &kp F12
             >;
