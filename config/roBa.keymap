@@ -9,10 +9,19 @@
 #define ENC_SCRL_UP MOVE_Y(ENCODER_SCROLL_STEP)
 #define ENC_SCRL_DOWN MOVE_Y(-ENCODER_SCROLL_STEP)
 
+// ホールド判定を長めにする共通タッピング時間。
+#define HOLD_TAPPING_TERM_MS 300
+
 // &mt のモッドタップ設定を共通調整。
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
+    tapping-term-ms = <HOLD_TAPPING_TERM_MS>;
+};
+
+// &lt のレイヤータップ判定を共通調整。
+&lt {
+    tapping-term-ms = <HOLD_TAPPING_TERM_MS>;
 };
 
 // トラックボールの動作設定（レイヤ番号は下のキーマップ参照）。
@@ -83,7 +92,7 @@
             bindings = <&mo>, <&to_layer_0>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <HOLD_TAPPING_TERM_MS>;
         };
 
         // エンコーダ回転で滑らかなホイールスクロールを送信。
