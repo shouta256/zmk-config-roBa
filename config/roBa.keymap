@@ -139,8 +139,8 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &ek                            &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &mo 6
             >;
 
-            // 切り分け用の一時設定：キー送出で回転が反応するか確認。
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            // エンコーダでスムーズスクロール。
+            sensor-bindings = <&enc_scroll SCRL_UP SCRL_DOWN>;
         };
 
         // ファンクションキー用レイヤ。
