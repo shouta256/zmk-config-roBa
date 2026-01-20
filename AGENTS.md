@@ -1,17 +1,18 @@
-# User Profile
-- Uses a MacBook (macOS) with a US keyboard layout.
-- CS major at a US university.
-- Main tasks: coding (TypeScript, Python), essays, and AI chat.
-- Uses Japanese IME frequently.
+# ユーザープロフィール
+- MacBook（macOS）を使用。US配列に慣れている。
+- アメリカの大学でCS専攻。
+- 主な作業はコーディング（TypeScript/Python）、エッセイ執筆、AIチャット。
+- 日本語IMEを頻繁に使う。
 
-# Preferences
-- Modifier keys should match Mac order: Control, Option, Command.
-- Do not rely on VSCode-specific shortcuts.
-- Function keys are not used.
-- Symbols are high priority.
+# 好み・方針
+- 修飾キーはMac準拠の順番（Control、Option、Command）。
+- VSCode固有のショートカットに依存しない。
+- ファンクションキーは使わない。
+- 記号を最優先で使いやすくする。
 
-# Keymap Direction
-- Keep thumb-based Japanese input toggles (Eisu/Kana) and Muhenkan behavior.
-- Optimize a symbol layer for code: [] {} () <> = + - * / _ \ | ! @ # $ %.
-- Prefer direct access to symbols and navigation over extra layers.
-- Provide Mac-style text navigation (Option/Command + arrow keys).
+# キーマップの方向性
+- 親指で日本語入力切り替え（英数/かな）と無変換を維持。
+- コード記号を集約：[] {} () <> = + - * / _ \ | ! @ # $ %。
+- 日本語用の記号も配置：「」『』、。・？！ー…（必要なら追加）。
+- 記号・ナビゲーションを直接アクセス優先にする。
+- Macのテキスト移動（Option/Command + 矢印）を使えるようにする。
