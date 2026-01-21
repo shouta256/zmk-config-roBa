@@ -154,7 +154,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(N5))                    &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
+&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(N5))                    &kp MINUS      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_SHIFT SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LALT      &kp LGUI      &ek                            &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &mo 6
             >;
@@ -192,7 +192,7 @@
             bindings = <
 &kp ESCAPE       &kp LC(LS(TAB))      &kp UP_ARROW      &kp LC(TAB)           &kp LG(UP)                              &kp LA(UP)         &kp LA(LEFT)   &kp LA(RIGHT)   &kp LA(DOWN)       &trans
 &kp HOME         &kp LEFT_ARROW       &kp DOWN_ARROW    &kp RIGHT_ARROW       &kp END          &trans      &trans  &kp LG(LEFT)       &kp LG(DOWN)   &kp LG(UP)      &kp LG(RIGHT)      &trans
-&kp LEFT_SHIFT   &kp LS(LA(LEFT))     &kp LG(DOWN)      &kp LS(LA(RIGHT))     &trans           &trans      &trans  &kp LS(LG(LEFT))   &trans         &trans          &kp LS(LG(RIGHT))  &trans
+&kp LEFT_SHIFT   &kp LS(LA(LEFT))     &kp LG(DOWN)      &kp LS(LA(RIGHT))     &trans           &trans      &trans  &kp LS(LG(LEFT))   &kp LS(LA(UP)) &kp LS(LA(DOWN)) &kp LS(LG(RIGHT))  &trans
 &trans           &trans               &trans            &trans                &trans           &trans      &trans  &trans                                                               &trans
             >;
 
