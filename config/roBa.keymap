@@ -151,6 +151,16 @@
             // ダブルタップをゆっくりめでも認識する。
             tapping-term-ms = <250>;
         };
+
+        // 親指キー：タップで英数/かな、ホールドで左Shift。
+        ek_shift: eisu_kana_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "EISU_KANA_SHIFT";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&ek>;
+            tapping-term-ms = <HOLD_TAPPING_TERM_MS>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -162,7 +172,7 @@
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(N5))                    &kp MINUS      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_SHIFT SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mkp MB1
-&kp LCTRL         &kp LALT      &kp LGUI      &ek                            &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &mkp MB2
+&kp LCTRL         &kp LALT      &kp LGUI      &ek_shift                      &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &mkp MB2
             >;
 
             // エンコーダでスムーズスクロール。
