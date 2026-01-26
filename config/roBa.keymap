@@ -30,7 +30,8 @@
 
 // トラックボールの動作設定（レイヤ番号は下のキーマップ参照）。
 &trackball {
-    automouse-layer = <4>;
+    // Disable auto layer switching to avoid unintended clicks.
+    automouse-layer = <0>;
     scroll-layers = <5>;
 
     // arrows {
