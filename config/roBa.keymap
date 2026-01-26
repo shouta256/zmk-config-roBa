@@ -146,10 +146,19 @@
             compatible = "zmk,behavior-tap-dance";
             label = "Eisu / Kana";
             #binding-cells = <0>;
-            bindings = <&kp LANGUAGE_2>, <&kp LANGUAGE_1>;
+            bindings = <&ek_hold LEFT_SHIFT LANGUAGE_2>, <&kp LANGUAGE_1>;
 
             // ダブルタップをゆっくりめでも認識する。
             tapping-term-ms = <250>;
+        };
+
+        // タップで英数、ホールドでシフト
+        ek_hold: eisu_kana_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <HOLD_TAPPING_TERM_MS>;
+            flavor = "balanced";
         };
     };
 
@@ -162,7 +171,7 @@
 &kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(N5))                    &kp MINUS      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_SHIFT SQT
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mkp MB1
-&kp LCTRL         &kp LALT      &kp LGUI      &mt LEFT_SHIFT LANGUAGE_2      &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &mkp MB2
+&kp LCTRL         &kp LALT      &kp LGUI      &ek                            &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &mkp MB2
             >;
 
             // エンコーダでスムーズスクロール。
