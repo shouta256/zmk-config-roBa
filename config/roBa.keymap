@@ -150,28 +150,24 @@
             tap-ms = <20>;
         };
 
-        // 親指キー用の英数／かな切り替えタップダンス。
+        // タップで英数、ホールドでシフト（シングルタップ用）
+        ek_hold: eisu_kana_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <HOLD_TAPPING_TERM_MS>;
+            flavor = "balanced";
+        };
 
+        // 親指キー用の英数／かな切り替えタップダンス。
+        // シングルタップ: 英数 (ホールドでシフト)
+        // ダブルタップ: かな
         ek: eisu_kana {
             compatible = "zmk,behavior-tap-dance";
             label = "Eisu / Kana";
             #binding-cells = <0>;
             bindings = <&ek_hold LEFT_SHIFT LANGUAGE_2>, <&kp LANGUAGE_1>;
-
-            // ダブルタップをゆっくりめでも認識する。
-
             tapping-term-ms = <250>;
-        };
-
-        // タップで英数、ホールドでシフト
-
-        ek_hold: eisu_kana_hold {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-
-            tapping-term-ms = <HOLD_TAPPING_TERM_MS>;
-            flavor = "balanced";
         };
     };
 
