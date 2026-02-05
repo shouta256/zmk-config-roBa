@@ -90,6 +90,8 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "col2row";
+        // ディープスリープからキー操作で復帰できるようにする。
+        wakeup-source;
         debounce-press-ms = <20>;
         debounce-release-ms = <20>;
             row-gpios
