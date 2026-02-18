@@ -16,7 +16,7 @@
 
 // ホールド判定を長めにする共通タッピング時間。
 
-#define HOLD_TAPPING_TERM_MS 300
+#define HOLD_TAPPING_TERM_MS 220
 
 // &mt のモッドタップ設定を共通調整。
 
@@ -108,7 +108,7 @@
         };
 
         screenShot {
-            bindings = <&kp LS(KP_NUMBER_5)>;
+            bindings = <&kp LG(LS(N5))>;
             key-positions = <26 27>;
         };
     };
@@ -188,7 +188,7 @@
         default_layer {
             bindings = <
 &kp Q      &kp W     &kp E     &kp R  &kp T                                                          &kp Y        &kp U  &lt 5 I   &kp O     &kp P
-&kp A      &kp S     &kp D     &kp F  &kp G        &kp LS(KP_NUMBER_5)                &kp MINUS      &kp H        &kp J  &kp K     &kp L     &mt RIGHT_SHIFT SQT
+&kp A      &kp S     &kp D     &kp F  &kp G        &kp LS(N5)                         &kp MINUS      &kp H        &kp J  &kp K     &kp L     &mt RIGHT_SHIFT SQT
 &kp Z      &kp X     &kp C     &kp V  &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &mkp MB1  &mkp MB2  &kp COMMA
 &kp LCTRL  &kp LALT  &kp LGUI  &ek    &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp PERIOD
             >;
