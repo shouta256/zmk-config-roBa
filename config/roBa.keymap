@@ -16,7 +16,7 @@
 
 // ホールド判定を長めにする共通タッピング時間。
 
-#define HOLD_TAPPING_TERM_MS 220
+#define HOLD_TAPPING_TERM_MS 198
 #define WORK_LAYER 7
 
 // &mt のモッドタップ設定を共通調整。
